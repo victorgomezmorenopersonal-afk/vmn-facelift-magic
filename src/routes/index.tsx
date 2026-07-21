@@ -17,6 +17,7 @@ import heroDevices from "@/assets/hero-devices.jpg";
 import newPhones from "@/assets/new-phones.jpg";
 import refurbishedPhones from "@/assets/refurbished-phones.jpg";
 import quality from "@/assets/quality.jpg";
+import vmnLogo from "@/assets/vmn-logo.jpeg.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
