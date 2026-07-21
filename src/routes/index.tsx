@@ -559,10 +559,12 @@ function Footer() {
     <footer className="border-t border-border/60 bg-surface">
       <div className="mx-auto grid max-w-7xl gap-10 px-4 py-14 sm:px-6 lg:grid-cols-3 lg:px-8">
         <div>
-          <div className="flex items-center gap-2">
-            <div className="grid h-10 w-10 place-items-center rounded-xl bg-gradient-primary text-primary-foreground shadow-soft">
-              <span className="font-display text-base font-bold">V</span>
-            </div>
+          <div className="flex items-center gap-3">
+            <img
+              src={vmnLogo.url}
+              alt="VMN Technology"
+              className="h-12 w-12 rounded-xl object-contain shadow-soft"
+            />
             <div className="leading-tight">
               <div className="font-display text-xl font-bold tracking-tight text-primary">
                 VMN Technology
