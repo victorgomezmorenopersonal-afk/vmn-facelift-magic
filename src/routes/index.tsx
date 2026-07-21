@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import {
   ArrowRight,
   BadgeCheck,
@@ -652,8 +652,14 @@ function Footer() {
         </div>
       </div>
       <div className="border-t border-border/60">
-        <div className="mx-auto flex max-w-7xl items-center justify-center px-4 py-6 text-xs text-muted-foreground sm:px-6 lg:px-8">
+        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-4 py-6 text-xs text-muted-foreground sm:flex-row sm:px-6 lg:px-8">
           <div>© 2026 VMN Technology · Todos los derechos reservados</div>
+          <nav className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2">
+            <Link to="/aviso-legal" className="hover:text-foreground">Aviso legal</Link>
+            <Link to="/politica-de-privacidad" className="hover:text-foreground">Política de privacidad</Link>
+            <Link to="/politica-de-cookies" className="hover:text-foreground">Política de cookies</Link>
+            <Link to="/declaracion-de-accesibilidad" className="hover:text-foreground">Accesibilidad</Link>
+          </nav>
         </div>
       </div>
 
