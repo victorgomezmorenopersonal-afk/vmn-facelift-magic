@@ -17,6 +17,7 @@ import heroDevices from "@/assets/hero-devices.jpg";
 import newPhones from "@/assets/new-phones.jpg";
 import refurbishedPhones from "@/assets/refurbished-phones.jpg";
 import quality from "@/assets/quality.jpg";
+import vmnLogo from "@/assets/vmn-logo.jpeg.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -81,10 +82,12 @@ function Nav() {
   return (
     <header className="sticky top-0 z-40 border-b border-border/60 bg-background/80 backdrop-blur-xl">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
-        <a href="#inicio" className="flex items-center gap-2">
-          <div className="grid h-9 w-9 place-items-center rounded-xl bg-gradient-primary text-primary-foreground shadow-soft">
-            <span className="font-display text-sm font-bold">V</span>
-          </div>
+        <a href="#inicio" className="flex items-center gap-3">
+          <img
+            src={vmnLogo.url}
+            alt="VMN Technology"
+            className="h-11 w-11 rounded-xl object-contain shadow-soft"
+          />
           <div className="leading-tight">
             <div className="font-display text-lg font-bold tracking-tight text-primary">
               VMN
@@ -556,10 +559,12 @@ function Footer() {
     <footer className="border-t border-border/60 bg-surface">
       <div className="mx-auto grid max-w-7xl gap-10 px-4 py-14 sm:px-6 lg:grid-cols-3 lg:px-8">
         <div>
-          <div className="flex items-center gap-2">
-            <div className="grid h-10 w-10 place-items-center rounded-xl bg-gradient-primary text-primary-foreground shadow-soft">
-              <span className="font-display text-base font-bold">V</span>
-            </div>
+          <div className="flex items-center gap-3">
+            <img
+              src={vmnLogo.url}
+              alt="VMN Technology"
+              className="h-12 w-12 rounded-xl object-contain shadow-soft"
+            />
             <div className="leading-tight">
               <div className="font-display text-xl font-bold tracking-tight text-primary">
                 VMN Technology
@@ -647,17 +652,8 @@ function Footer() {
         </div>
       </div>
       <div className="border-t border-border/60">
-        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-2 px-4 py-6 text-xs text-muted-foreground sm:flex-row sm:px-6 lg:px-8">
+        <div className="mx-auto flex max-w-7xl items-center justify-center px-4 py-6 text-xs text-muted-foreground sm:px-6 lg:px-8">
           <div>© 2026 VMN Technology · Todos los derechos reservados</div>
-          <div>
-            Producido por{" "}
-            <a
-              href="https://www.beedigital.es/"
-              className="font-semibold text-foreground hover:text-primary"
-            >
-              Beedigital
-            </a>
-          </div>
         </div>
       </div>
 
