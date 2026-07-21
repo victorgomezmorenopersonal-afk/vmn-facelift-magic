@@ -82,10 +82,12 @@ function Nav() {
   return (
     <header className="sticky top-0 z-40 border-b border-border/60 bg-background/80 backdrop-blur-xl">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
-        <a href="#inicio" className="flex items-center gap-2">
-          <div className="grid h-9 w-9 place-items-center rounded-xl bg-gradient-primary text-primary-foreground shadow-soft">
-            <span className="font-display text-sm font-bold">V</span>
-          </div>
+        <a href="#inicio" className="flex items-center gap-3">
+          <img
+            src={vmnLogo.url}
+            alt="VMN Technology"
+            className="h-11 w-11 rounded-xl object-contain shadow-soft"
+          />
           <div className="leading-tight">
             <div className="font-display text-lg font-bold tracking-tight text-primary">
               VMN
