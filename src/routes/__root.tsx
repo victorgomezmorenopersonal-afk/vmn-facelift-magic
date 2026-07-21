@@ -77,11 +77,22 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "VMN Technology · Mayorista de móviles en Madrid" },
+      {
+        name: "description",
+        content:
+          "Mayorista y distribuidor de smartphones nuevos y reacondicionados en Madrid para profesionales.",
+      },
+      { name: "author", content: "VMN Technology" },
+      {
+        property: "og:title",
+        content: "VMN Technology · Mayorista de móviles en Madrid",
+      },
+      {
+        property: "og:description",
+        content:
+          "Smartphones nuevos y reacondicionados grado A y A+ para profesionales. Stock real y envíos rápidos.",
+      },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:site", content: "@Lovable" },
