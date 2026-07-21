@@ -652,17 +652,8 @@ function Footer() {
         </div>
       </div>
       <div className="border-t border-border/60">
-        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-2 px-4 py-6 text-xs text-muted-foreground sm:flex-row sm:px-6 lg:px-8">
+        <div className="mx-auto flex max-w-7xl items-center justify-center px-4 py-6 text-xs text-muted-foreground sm:px-6 lg:px-8">
           <div>© 2026 VMN Technology · Todos los derechos reservados</div>
-          <div>
-            Producido por{" "}
-            <a
-              href="https://www.beedigital.es/"
-              className="font-semibold text-foreground hover:text-primary"
-            >
-              Beedigital
-            </a>
-          </div>
         </div>
       </div>
 
