@@ -107,10 +107,14 @@ function BlogPage() {
           <div className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {posts.map((p) => (
               <article
-                key={p.href}
+                key={p.slug}
                 className="group relative flex flex-col overflow-hidden rounded-3xl border border-border/60 bg-card shadow-card transition-all hover:-translate-y-1 hover:shadow-elegant"
               >
-                <div className="relative aspect-[16/10] overflow-hidden bg-gradient-soft">
+                <Link
+                  to="/blog/$slug"
+                  params={{ slug: p.slug }}
+                  className="relative aspect-[16/10] overflow-hidden bg-gradient-soft"
+                >
                   <img
                     src={p.image}
                     alt={p.title}
@@ -122,7 +126,7 @@ function BlogPage() {
                   <span className="absolute left-4 top-4 rounded-full bg-background/90 px-3 py-1 text-xs font-semibold text-primary backdrop-blur">
                     {p.tag}
                   </span>
-                </div>
+                </Link>
 
                 <div className="flex flex-1 flex-col gap-4 p-7">
                   <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-muted-foreground">
@@ -134,18 +138,26 @@ function BlogPage() {
                     </span>
                   </div>
                   <h3 className="font-display text-lg font-bold leading-snug tracking-tight">
-                    {p.title}
+                    <Link
+                      to="/blog/$slug"
+                      params={{ slug: p.slug }}
+                      className="transition-colors hover:text-primary"
+                    >
+                      {p.title}
+                    </Link>
                   </h3>
                   <p className="text-sm text-muted-foreground">{p.excerpt}</p>
-                  <a
-                    href={p.href}
+                  <Link
+                    to="/blog/$slug"
+                    params={{ slug: p.slug }}
                     className="mt-auto inline-flex w-fit items-center gap-2 text-sm font-semibold text-primary hover:gap-3 transition-all"
                   >
                     Leer artículo <ArrowRight className="h-4 w-4" />
-                  </a>
+                  </Link>
                 </div>
               </article>
             ))}
+
           </div>
         </div>
       </section>
