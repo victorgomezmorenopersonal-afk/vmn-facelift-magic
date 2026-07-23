@@ -18,6 +18,8 @@ import newPhones from "@/assets/new-phones.jpg";
 import refurbishedPhones from "@/assets/refurbished-phones.jpg";
 import quality from "@/assets/quality.jpg";
 import vmnLogo from "@/assets/vmn-logo.jpeg.asset.json";
+import { SiteHeader } from "@/components/SiteHeader";
+
 
 export const Route = createFileRoute("/")({
   head: () => ({
