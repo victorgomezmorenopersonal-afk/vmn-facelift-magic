@@ -18,6 +18,7 @@ const brands = [
     body:
       "Disponemos de una amplia selección de iPhone nuevos y reacondicionados, revisados y clasificados en los mejores grados de conservación. Son una excelente opción para negocios que buscan ofrecer dispositivos premium con total garantía.",
     image: brandApple,
+    slug: "por-que-comprar-apple-iphone-distribuidor",
   },
   {
     name: "Samsung",
@@ -25,6 +26,7 @@ const brands = [
     body:
       "Contamos con una gran variedad de smartphones Samsung, desde las gamas más económicas hasta los modelos Galaxy de alta gama, siempre con disponibilidad constante y precios adaptados a profesionales.",
     image: brandSamsung,
+    slug: "por-que-comprar-samsung-galaxy-distribuidor",
   },
   {
     name: "Xiaomi",
@@ -32,6 +34,7 @@ const brands = [
     body:
       "La marca Xiaomi destaca por ofrecer dispositivos con una excelente relación calidad-precio. Disponemos de los modelos más demandados para que puedas ampliar tu catálogo con una de las marcas con mayor crecimiento del mercado.",
     image: brandXiaomi,
+    slug: "por-que-comprar-xiaomi-distribuidor",
   },
   {
     name: "Funker",
@@ -39,6 +42,7 @@ const brands = [
     body:
       "También distribuimos dispositivos Funker, una alternativa práctica y funcional para clientes que buscan equipos fiables y asequibles, ideales para diferentes perfiles de usuario.",
     image: brandFunker,
+    slug: "por-que-comprar-funker-distribuidor",
   },
 ];
 
@@ -125,12 +129,13 @@ function MarcasPage() {
                     {b.name}
                   </h3>
                   <p className="mt-3 text-muted-foreground">{b.body}</p>
-                  <a
-                    href={WHATSAPP}
+                  <Link
+                    to="/blog/$slug"
+                    params={{ slug: b.slug }}
                     className="mt-6 inline-flex w-fit items-center gap-2 rounded-full bg-foreground px-5 py-2.5 text-sm font-semibold text-background transition-transform hover:-translate-y-0.5"
                   >
-                    Consultar stock <ArrowRight className="h-4 w-4" />
-                  </a>
+                    Leer artículo <ArrowRight className="h-4 w-4" />
+                  </Link>
                 </div>
               </article>
             ))}

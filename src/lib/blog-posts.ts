@@ -3,6 +3,10 @@ import blogRefurbished from "@/assets/blog-refurbished.jpg";
 import blogProfitability from "@/assets/blog-profitability.jpg";
 import newPhones from "@/assets/new-phones.jpg";
 import refurbishedPhones from "@/assets/refurbished-phones.jpg";
+import brandApple from "@/assets/brand-apple.jpg";
+import brandSamsung from "@/assets/brand-samsung.jpg";
+import brandXiaomi from "@/assets/brand-xiaomi.jpg";
+import brandFunker from "@/assets/brand-funker.jpg";
 
 export type BlogSection =
   | { type: "p"; html: string }
@@ -556,6 +560,197 @@ export const posts: BlogPost[] = [
       {
         type: "p",
         html: "Si buscas un proveedor fiable de móviles reacondicionados de alta gama, estás en el lugar adecuado. <strong>Contacta con nosotros</strong> y solicita información sin compromiso para empezar a trabajar con nosotros.",
+      },
+    ],
+  },
+  {
+    slug: "por-que-comprar-apple-iphone-distribuidor",
+    title: "Por qué comprar Apple: la marca premium que siempre vende",
+    excerpt:
+      "El iPhone lidera el mercado premium año tras año. Descubre por qué incorporar Apple a tu catálogo es una apuesta segura de rentabilidad.",
+    author: "VMN Technology",
+    date: "22 de julio de 2026",
+    tag: "Apple",
+    image: brandApple,
+    lead: "Apple es sinónimo de deseo, fidelidad y margen. Incorporar iPhone a tu catálogo no es solo vender un teléfono: es ofrecer el producto tecnológico más demandado del mercado premium.",
+    sections: [
+      { type: "h2", text: "Una marca con demanda constante" },
+      {
+        type: "p",
+        html: "El iPhone es, año tras año, el smartphone más vendido en el segmento premium. Su ecosistema cerrado, la integración con iPad, Mac, Apple Watch y AirPods, y una base de usuarios extremadamente fiel garantizan que la demanda no dependa de campañas puntuales: existe todo el año.",
+      },
+      {
+        type: "p",
+        html: "Para un distribuidor o tienda, esto significa <strong>rotación asegurada</strong> y menor riesgo de stock parado.",
+      },
+      { type: "h2", text: "Valor residual líder del mercado" },
+      {
+        type: "p",
+        html: "Ningún fabricante conserva el precio como Apple. Un iPhone de dos o tres años sigue teniendo un valor de reventa muy superior al de cualquier competidor, lo que convierte tanto al modelo nuevo como al reacondicionado en un producto especialmente atractivo para el cliente final.",
+      },
+      { type: "h2", text: "Reacondicionados Grado A: la puerta de entrada" },
+      {
+        type: "p",
+        html: "En VMN Technology trabajamos iPhone reacondicionados con los mejores grados de conservación. Son la opción ideal para negocios que quieren ofrecer un producto premium con márgenes competitivos y sin renunciar a la calidad Apple.",
+      },
+      {
+        type: "ul",
+        items: [
+          "Modelos desde iPhone 13 hasta los más recientes.",
+          "Diferentes capacidades y colores.",
+          "Dispositivos revisados y clasificados.",
+          "Stock actualizado con rotación constante.",
+        ],
+      },
+      { type: "h2", text: "Ideal para todo tipo de cliente" },
+      {
+        type: "p",
+        html: "Desde el usuario particular que busca su primer iPhone hasta empresas que renuevan la flota de dispositivos de sus empleados, Apple encaja en prácticamente cualquier perfil de comprador.",
+      },
+      { type: "h2", text: "Trabaja con nosotros" },
+      {
+        type: "p",
+        html: "Si quieres ampliar tu catálogo con iPhone al mejor precio, <strong>contacta con VMN Technology</strong> y consulta nuestro stock disponible.",
+      },
+    ],
+  },
+  {
+    slug: "por-que-comprar-samsung-galaxy-distribuidor",
+    title: "Por qué comprar Samsung: la marca más versátil del mercado",
+    excerpt:
+      "Desde la gama de entrada hasta los Galaxy S Ultra, Samsung cubre todos los perfiles de cliente. Un básico en cualquier catálogo multimarca.",
+    author: "VMN Technology",
+    date: "22 de julio de 2026",
+    tag: "Samsung",
+    image: brandSamsung,
+    lead: "Samsung es la marca más versátil del mercado Android. Con ella cubres desde el cliente que busca su primer smartphone hasta el que quiere lo último en gama alta.",
+    sections: [
+      { type: "h2", text: "Cobertura total de gamas" },
+      {
+        type: "p",
+        html: "Pocos fabricantes ofrecen un catálogo tan amplio como Samsung. Desde la serie Galaxy A, con precios muy competitivos, hasta los Galaxy S Ultra y los plegables Z Fold y Z Flip, hay un modelo Samsung para cada bolsillo y cada necesidad.",
+      },
+      {
+        type: "p",
+        html: "Esto convierte a Samsung en una marca <strong>imprescindible</strong> en cualquier tienda multimarca.",
+      },
+      { type: "h2", text: "Reconocimiento de marca global" },
+      {
+        type: "p",
+        html: "Samsung es una de las marcas más reconocidas del mundo. El cliente confía en ella, lo que reduce el esfuerzo comercial y facilita la venta cruzada de accesorios y servicios.",
+      },
+      { type: "h2", text: "Actualizaciones y soporte prolongado" },
+      {
+        type: "p",
+        html: "Los Galaxy actuales reciben hasta siete años de actualizaciones de Android y parches de seguridad. Esto alarga la vida útil del dispositivo y aumenta su valor tanto en el mercado de nuevo como de reacondicionado.",
+      },
+      { type: "h2", text: "Nuestro stock Samsung" },
+      {
+        type: "p",
+        html: "En VMN Technology mantenemos disponibilidad continua de Samsung Galaxy en múltiples gamas:",
+      },
+      {
+        type: "ul",
+        items: [
+          "Galaxy A: precio ajustado y gran salida.",
+          "Galaxy S: gama alta con máximas prestaciones.",
+          "Galaxy Z: plegables para el cliente más exigente.",
+          "Nuevos y reacondicionados de distintos grados.",
+        ],
+      },
+      { type: "h2", text: "Consulta disponibilidad" },
+      {
+        type: "p",
+        html: "¿Quieres precios y stock actualizado de Samsung? <strong>Escríbenos</strong> y te enviamos la lista al momento.",
+      },
+    ],
+  },
+  {
+    slug: "por-que-comprar-xiaomi-distribuidor",
+    title: "Por qué comprar Xiaomi: la mejor relación calidad-precio",
+    excerpt:
+      "Xiaomi es una de las marcas con mayor crecimiento del mercado. Prestaciones de gama alta a precios muy competitivos.",
+    author: "VMN Technology",
+    date: "22 de julio de 2026",
+    tag: "Xiaomi",
+    image: brandXiaomi,
+    lead: "Xiaomi se ha consolidado como la marca de referencia en relación calidad-precio. Un imprescindible para atraer al cliente que busca máximas prestaciones sin pagar de más.",
+    sections: [
+      { type: "h2", text: "Prestaciones premium a precio contenido" },
+      {
+        type: "p",
+        html: "Xiaomi ofrece pantallas AMOLED de alta tasa de refresco, cámaras desarrolladas junto a fabricantes ópticos de prestigio y carga rápida líder en el mercado, todo ello a precios sensiblemente inferiores a los de otras marcas de gama alta.",
+      },
+      { type: "h2", text: "Crecimiento sostenido" },
+      {
+        type: "p",
+        html: "Es una de las marcas que más crece a nivel mundial. Los usuarios que prueban Xiaomi suelen repetir, generando un cliente recurrente para tu negocio.",
+      },
+      { type: "h2", text: "Un catálogo para cada perfil" },
+      {
+        type: "p",
+        html: "La familia Xiaomi cubre desde la gama de entrada Redmi hasta la serie Xiaomi 14/15, pasando por la línea POCO orientada a rendimiento puro. Puedes segmentar por perfil de cliente con facilidad.",
+      },
+      {
+        type: "ul",
+        items: [
+          "Redmi: máxima accesibilidad.",
+          "POCO: rendimiento y gaming.",
+          "Xiaomi serie principal: gama alta completa.",
+        ],
+      },
+      { type: "h2", text: "Disponibilidad y stock" },
+      {
+        type: "p",
+        html: "En VMN Technology disponemos de los modelos Xiaomi más demandados con reposición constante. Ideal para ampliar tu catálogo con una marca en pleno crecimiento.",
+      },
+      { type: "h2", text: "Solicita precios" },
+      {
+        type: "p",
+        html: "<strong>Contacta con nosotros</strong> para conocer nuestras condiciones y disponibilidad de Xiaomi.",
+      },
+    ],
+  },
+  {
+    slug: "por-que-comprar-funker-distribuidor",
+    title: "Por qué comprar Funker: la alternativa práctica y funcional",
+    excerpt:
+      "Funker es la opción perfecta para clientes que buscan un dispositivo fiable, asequible y fácil de usar. Un complemento ideal en tu catálogo.",
+    author: "VMN Technology",
+    date: "22 de julio de 2026",
+    tag: "Funker",
+    image: brandFunker,
+    lead: "Funker cubre un segmento que las grandes marcas no siempre atienden: el usuario que quiere un teléfono sencillo, funcional y a un precio muy contenido.",
+    sections: [
+      { type: "h2", text: "Un dispositivo para cada necesidad" },
+      {
+        type: "p",
+        html: "Funker se ha especializado en fabricar terminales prácticos y fáciles de usar. Su catálogo incluye desde teléfonos con teclas físicas hasta smartphones de uso básico, ideales para personas mayores, segundos terminales o entornos de trabajo específicos.",
+      },
+      { type: "h2", text: "Precio muy competitivo" },
+      {
+        type: "p",
+        html: "Uno de los grandes valores de Funker es su precio. Permite ofrecer al cliente una alternativa <strong>real y funcional</strong> muy por debajo de lo que cuesta un smartphone de las marcas líderes.",
+      },
+      { type: "h2", text: "Perfiles de cliente" },
+      {
+        type: "ul",
+        items: [
+          "Personas mayores que buscan sencillez.",
+          "Usuarios que necesitan un segundo terminal.",
+          "Empresas que dotan a sus empleados de dispositivos básicos.",
+          "Clientes que buscan un teléfono duradero y sin complicaciones.",
+        ],
+      },
+      { type: "h2", text: "Un básico en tu catálogo" },
+      {
+        type: "p",
+        html: "Incluir Funker te permite atender a un perfil de cliente que, de otra forma, se marcharía sin comprar. Es una gama complementaria perfecta para cualquier tienda de telefonía.",
+      },
+      { type: "h2", text: "Consulta stock Funker" },
+      {
+        type: "p",
+        html: "¿Quieres ampliar tu catálogo con Funker? <strong>Escríbenos por WhatsApp</strong> y te informamos de la disponibilidad al momento.",
       },
     ],
   },
