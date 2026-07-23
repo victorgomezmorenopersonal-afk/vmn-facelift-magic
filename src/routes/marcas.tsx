@@ -1,7 +1,11 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight, MessageCircle, Smartphone } from "lucide-react";
+import { ArrowRight, MessageCircle } from "lucide-react";
 import { SiteHeader } from "@/components/SiteHeader";
 import { PageHero, SiteFooter } from "@/components/SiteFooter";
+import brandApple from "@/assets/brand-apple.jpg";
+import brandSamsung from "@/assets/brand-samsung.jpg";
+import brandXiaomi from "@/assets/brand-xiaomi.jpg";
+import brandFunker from "@/assets/brand-funker.jpg";
 
 const WHATSAPP = "https://wa.me/+34689592659";
 
@@ -11,26 +15,31 @@ const brands = [
     tag: "Premium",
     body:
       "Disponemos de una amplia selección de iPhone nuevos y reacondicionados, revisados y clasificados en los mejores grados de conservación. Son una excelente opción para negocios que buscan ofrecer dispositivos premium con total garantía.",
+    image: brandApple,
   },
   {
     name: "Samsung",
     tag: "Multi-gama",
     body:
       "Contamos con una gran variedad de smartphones Samsung, desde las gamas más económicas hasta los modelos Galaxy de alta gama, siempre con disponibilidad constante y precios adaptados a profesionales.",
+    image: brandSamsung,
   },
   {
     name: "Xiaomi",
     tag: "Calidad-precio",
     body:
       "La marca Xiaomi destaca por ofrecer dispositivos con una excelente relación calidad-precio. Disponemos de los modelos más demandados para que puedas ampliar tu catálogo con una de las marcas con mayor crecimiento del mercado.",
+    image: brandXiaomi,
   },
   {
     name: "Funker",
     tag: "Funcional",
     body:
       "También distribuimos dispositivos Funker, una alternativa práctica y funcional para clientes que buscan equipos fiables y asequibles, ideales para diferentes perfiles de usuario.",
+    image: brandFunker,
   },
 ];
+
 
 export const Route = createFileRoute("/marcas")({
   head: () => ({
@@ -94,29 +103,37 @@ function MarcasPage() {
             {brands.map((b) => (
               <article
                 key={b.name}
-                className="group relative flex flex-col overflow-hidden rounded-3xl border border-border/60 bg-card p-8 shadow-card transition-all hover:-translate-y-1 hover:shadow-elegant"
+                className="group relative flex flex-col overflow-hidden rounded-3xl border border-border/60 bg-card shadow-card transition-all hover:-translate-y-1 hover:shadow-elegant"
               >
-                <div className="flex items-center justify-between">
-                  <div className="grid h-12 w-12 place-items-center rounded-2xl bg-primary/10 text-primary">
-                    <Smartphone className="h-6 w-6" />
-                  </div>
-                  <span className="rounded-full border border-border bg-background px-3 py-1 text-xs font-semibold text-primary">
+                <div className="relative aspect-[16/10] overflow-hidden bg-gradient-soft">
+                  <img
+                    src={b.image}
+                    alt={b.name}
+                    loading="lazy"
+                    width={1024}
+                    height={640}
+                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <span className="absolute left-4 top-4 rounded-full bg-background/90 px-3 py-1 text-xs font-semibold text-primary backdrop-blur">
                     {b.tag}
                   </span>
                 </div>
-                <h3 className="mt-6 font-display text-2xl font-bold tracking-tight">
-                  {b.name}
-                </h3>
-                <p className="mt-3 text-muted-foreground">{b.body}</p>
-                <a
-                  href={WHATSAPP}
-                  className="mt-6 inline-flex w-fit items-center gap-2 rounded-full bg-foreground px-5 py-2.5 text-sm font-semibold text-background transition-transform hover:-translate-y-0.5"
-                >
-                  Consultar stock <ArrowRight className="h-4 w-4" />
-                </a>
+                <div className="flex flex-1 flex-col p-8">
+                  <h3 className="font-display text-2xl font-bold tracking-tight">
+                    {b.name}
+                  </h3>
+                  <p className="mt-3 text-muted-foreground">{b.body}</p>
+                  <a
+                    href={WHATSAPP}
+                    className="mt-6 inline-flex w-fit items-center gap-2 rounded-full bg-foreground px-5 py-2.5 text-sm font-semibold text-background transition-transform hover:-translate-y-0.5"
+                  >
+                    Consultar stock <ArrowRight className="h-4 w-4" />
+                  </a>
+                </div>
               </article>
             ))}
           </div>
+
         </div>
       </section>
 
