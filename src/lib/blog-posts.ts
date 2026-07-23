@@ -3,6 +3,10 @@ import blogRefurbished from "@/assets/blog-refurbished.jpg";
 import blogProfitability from "@/assets/blog-profitability.jpg";
 import newPhones from "@/assets/new-phones.jpg";
 import refurbishedPhones from "@/assets/refurbished-phones.jpg";
+import brandApple from "@/assets/brand-apple.jpg";
+import brandSamsung from "@/assets/brand-samsung.jpg";
+import brandXiaomi from "@/assets/brand-xiaomi.jpg";
+import brandFunker from "@/assets/brand-funker.jpg";
 
 export type BlogSection =
   | { type: "p"; html: string }
