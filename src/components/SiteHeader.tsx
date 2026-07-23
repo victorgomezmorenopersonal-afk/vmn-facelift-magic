@@ -6,6 +6,7 @@ import vmnLogo from "@/assets/vmn-logo.jpeg.asset.json";
 const links = [
   { label: "Inicio", to: "/" as const },
   { label: "Nosotros", to: "/nosotros" as const },
+  { label: "Smartphones", to: "/smartphones" as const },
   { label: "Marcas", to: "/marcas" as const },
   { label: "Blog", to: "/blog" as const },
   { label: "Contacto", to: "/contacto" as const },

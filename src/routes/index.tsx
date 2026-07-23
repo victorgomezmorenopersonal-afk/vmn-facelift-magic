@@ -305,7 +305,7 @@ function Products() {
       body:
         "Descubre nuestra selección de móviles nuevos de las principales marcas del mercado, ideales para ofrecer a tus clientes productos actuales con garantía oficial y máxima fiabilidad. Disponemos de modelos actualizados con stock constante y precios competitivos para profesionales.",
       cta: "Accede ahora a nuestra sección de móviles nuevos y encuentra los dispositivos que mejor encajan con tu negocio.",
-      href: "https://www.vmntechnology.es/equipos-nuevos",
+      slug: "smartphones-nuevos-madrid",
     },
     {
       img: refurbishedPhones,
@@ -314,7 +314,7 @@ function Products() {
       body:
         "Si buscas una opción más económica sin renunciar a la calidad, nuestros smartphones reacondicionados grado A y A+ son la solución perfecta. Equipos revisados, testados y listos para su uso, ideales para ampliar tu catálogo con productos de alta rotación y excelente margen.",
       cta: "Explora nuestra sección de móviles reacondicionados y aprovecha las mejores oportunidades del mercado.",
-      href: "https://www.vmntechnology.es/equipos-seminuevos",
+      slug: "smartphones-reacondicionados-alta-gama-madrid",
     },
   ];
 
@@ -360,15 +360,26 @@ function Products() {
                 </h3>
                 <p className="text-muted-foreground">{p.body}</p>
                 <p className="text-sm font-medium text-foreground">{p.cta}</p>
-                <a
-                  href={p.href}
+                <Link
+                  to="/blog/$slug"
+                  params={{ slug: p.slug }}
                   className="mt-auto inline-flex w-fit items-center gap-2 rounded-full bg-foreground px-5 py-2.5 text-sm font-semibold text-background transition-transform hover:-translate-y-0.5"
                 >
-                  Ver más <ArrowRight className="h-4 w-4" />
-                </a>
+                  Leer artículo <ArrowRight className="h-4 w-4" />
+                </Link>
               </div>
             </article>
           ))}
+        </div>
+
+        <div className="mt-10 flex justify-center">
+          <Link
+            to="/smartphones"
+            className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-6 py-3 text-sm font-semibold text-foreground shadow-card transition-transform hover:-translate-y-0.5"
+          >
+            Ver sección Smartphones nuevos y reacondicionados{" "}
+            <ArrowRight className="h-4 w-4 text-primary" />
+          </Link>
         </div>
       </div>
     </section>
