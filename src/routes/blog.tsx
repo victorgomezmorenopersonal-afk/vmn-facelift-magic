@@ -2,6 +2,9 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, CalendarDays, MessageCircle, User } from "lucide-react";
 import { SiteHeader } from "@/components/SiteHeader";
 import { PageHero, SiteFooter } from "@/components/SiteFooter";
+import blogIphone from "@/assets/blog-iphone-wholesale.jpg";
+import blogRefurbished from "@/assets/blog-refurbished.jpg";
+import blogProfitability from "@/assets/blog-profitability.jpg";
 
 const WHATSAPP = "https://wa.me/+34689592659";
 
@@ -15,6 +18,7 @@ const posts = [
       "Comprar iPhone al por mayor: una oportunidad para hacer crecer tu negocio.",
     href: "https://www.vmntechnology.es/comprar-iphone-al-por-mayor-en-espana-guia-completa-para-profesionales-2026",
     tag: "iPhone",
+    image: blogIphone,
   },
   {
     title:
@@ -24,6 +28,7 @@ const posts = [
     excerpt: "¿Qué es exactamente un móvil reacondicionado?",
     href: "https://www.vmntechnology.es/por-que-comprar-un-movil-reacondicionado-es-una-de-las-mejores-decisiones-en-2026",
     tag: "Reacondicionados",
+    image: blogRefurbished,
   },
   {
     title: "Móvil Reacondicionado en 2026: Por qué es tu mejor opción",
@@ -33,8 +38,10 @@ const posts = [
       "Descubre por qué comprar un móvil reacondicionado es la decisión más inteligente en 2026. Ahorro, sostenibilidad y calidad garantizada para tu negocio.",
     href: "https://www.vmntechnology.es/por-que-comprar-movil-reacondicionado-2026-rentabilidad",
     tag: "Rentabilidad",
+    image: blogProfitability,
   },
 ];
+
 
 export const Route = createFileRoute("/blog")({
   head: () => ({
@@ -139,16 +146,19 @@ function BlogPage() {
                 className="group relative flex flex-col overflow-hidden rounded-3xl border border-border/60 bg-card shadow-card transition-all hover:-translate-y-1 hover:shadow-elegant"
               >
                 <div className="relative aspect-[16/10] overflow-hidden bg-gradient-soft">
-                  <div className="absolute inset-0 bg-gradient-primary opacity-20" />
-                  <div className="absolute inset-0 grid place-items-center">
-                    <div className="font-display text-4xl font-bold tracking-tight text-primary/60">
-                      VMN
-                    </div>
-                  </div>
+                  <img
+                    src={p.image}
+                    alt={p.title}
+                    loading="lazy"
+                    width={1024}
+                    height={640}
+                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
                   <span className="absolute left-4 top-4 rounded-full bg-background/90 px-3 py-1 text-xs font-semibold text-primary backdrop-blur">
                     {p.tag}
                   </span>
                 </div>
+
                 <div className="flex flex-1 flex-col gap-4 p-7">
                   <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-muted-foreground">
                     <span className="inline-flex items-center gap-1.5">
