@@ -11,7 +11,11 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as PoliticaDePrivacidadRouteImport } from './routes/politica-de-privacidad'
 import { Route as PoliticaDeCookiesRouteImport } from './routes/politica-de-cookies'
+import { Route as NosotrosRouteImport } from './routes/nosotros'
+import { Route as MarcasRouteImport } from './routes/marcas'
 import { Route as DeclaracionDeAccesibilidadRouteImport } from './routes/declaracion-de-accesibilidad'
+import { Route as ContactoRouteImport } from './routes/contacto'
+import { Route as BlogRouteImport } from './routes/blog'
 import { Route as AvisoLegalRouteImport } from './routes/aviso-legal'
 import { Route as IndexRouteImport } from './routes/index'
 
@@ -25,12 +29,32 @@ const PoliticaDeCookiesRoute = PoliticaDeCookiesRouteImport.update({
   path: '/politica-de-cookies',
   getParentRoute: () => rootRouteImport,
 } as any)
+const NosotrosRoute = NosotrosRouteImport.update({
+  id: '/nosotros',
+  path: '/nosotros',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MarcasRoute = MarcasRouteImport.update({
+  id: '/marcas',
+  path: '/marcas',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const DeclaracionDeAccesibilidadRoute =
   DeclaracionDeAccesibilidadRouteImport.update({
     id: '/declaracion-de-accesibilidad',
     path: '/declaracion-de-accesibilidad',
     getParentRoute: () => rootRouteImport,
   } as any)
+const ContactoRoute = ContactoRouteImport.update({
+  id: '/contacto',
+  path: '/contacto',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BlogRoute = BlogRouteImport.update({
+  id: '/blog',
+  path: '/blog',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const AvisoLegalRoute = AvisoLegalRouteImport.update({
   id: '/aviso-legal',
   path: '/aviso-legal',
@@ -45,14 +69,22 @@ const IndexRoute = IndexRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/aviso-legal': typeof AvisoLegalRoute
+  '/blog': typeof BlogRoute
+  '/contacto': typeof ContactoRoute
   '/declaracion-de-accesibilidad': typeof DeclaracionDeAccesibilidadRoute
+  '/marcas': typeof MarcasRoute
+  '/nosotros': typeof NosotrosRoute
   '/politica-de-cookies': typeof PoliticaDeCookiesRoute
   '/politica-de-privacidad': typeof PoliticaDePrivacidadRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/aviso-legal': typeof AvisoLegalRoute
+  '/blog': typeof BlogRoute
+  '/contacto': typeof ContactoRoute
   '/declaracion-de-accesibilidad': typeof DeclaracionDeAccesibilidadRoute
+  '/marcas': typeof MarcasRoute
+  '/nosotros': typeof NosotrosRoute
   '/politica-de-cookies': typeof PoliticaDeCookiesRoute
   '/politica-de-privacidad': typeof PoliticaDePrivacidadRoute
 }
@@ -60,7 +92,11 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/aviso-legal': typeof AvisoLegalRoute
+  '/blog': typeof BlogRoute
+  '/contacto': typeof ContactoRoute
   '/declaracion-de-accesibilidad': typeof DeclaracionDeAccesibilidadRoute
+  '/marcas': typeof MarcasRoute
+  '/nosotros': typeof NosotrosRoute
   '/politica-de-cookies': typeof PoliticaDeCookiesRoute
   '/politica-de-privacidad': typeof PoliticaDePrivacidadRoute
 }
@@ -69,21 +105,33 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/aviso-legal'
+    | '/blog'
+    | '/contacto'
     | '/declaracion-de-accesibilidad'
+    | '/marcas'
+    | '/nosotros'
     | '/politica-de-cookies'
     | '/politica-de-privacidad'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
     | '/aviso-legal'
+    | '/blog'
+    | '/contacto'
     | '/declaracion-de-accesibilidad'
+    | '/marcas'
+    | '/nosotros'
     | '/politica-de-cookies'
     | '/politica-de-privacidad'
   id:
     | '__root__'
     | '/'
     | '/aviso-legal'
+    | '/blog'
+    | '/contacto'
     | '/declaracion-de-accesibilidad'
+    | '/marcas'
+    | '/nosotros'
     | '/politica-de-cookies'
     | '/politica-de-privacidad'
   fileRoutesById: FileRoutesById
@@ -91,7 +139,11 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AvisoLegalRoute: typeof AvisoLegalRoute
+  BlogRoute: typeof BlogRoute
+  ContactoRoute: typeof ContactoRoute
   DeclaracionDeAccesibilidadRoute: typeof DeclaracionDeAccesibilidadRoute
+  MarcasRoute: typeof MarcasRoute
+  NosotrosRoute: typeof NosotrosRoute
   PoliticaDeCookiesRoute: typeof PoliticaDeCookiesRoute
   PoliticaDePrivacidadRoute: typeof PoliticaDePrivacidadRoute
 }
@@ -112,11 +164,39 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PoliticaDeCookiesRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/nosotros': {
+      id: '/nosotros'
+      path: '/nosotros'
+      fullPath: '/nosotros'
+      preLoaderRoute: typeof NosotrosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/marcas': {
+      id: '/marcas'
+      path: '/marcas'
+      fullPath: '/marcas'
+      preLoaderRoute: typeof MarcasRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/declaracion-de-accesibilidad': {
       id: '/declaracion-de-accesibilidad'
       path: '/declaracion-de-accesibilidad'
       fullPath: '/declaracion-de-accesibilidad'
       preLoaderRoute: typeof DeclaracionDeAccesibilidadRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contacto': {
+      id: '/contacto'
+      path: '/contacto'
+      fullPath: '/contacto'
+      preLoaderRoute: typeof ContactoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blog': {
+      id: '/blog'
+      path: '/blog'
+      fullPath: '/blog'
+      preLoaderRoute: typeof BlogRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/aviso-legal': {
@@ -139,20 +219,14 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AvisoLegalRoute: AvisoLegalRoute,
+  BlogRoute: BlogRoute,
+  ContactoRoute: ContactoRoute,
   DeclaracionDeAccesibilidadRoute: DeclaracionDeAccesibilidadRoute,
+  MarcasRoute: MarcasRoute,
+  NosotrosRoute: NosotrosRoute,
   PoliticaDeCookiesRoute: PoliticaDeCookiesRoute,
   PoliticaDePrivacidadRoute: PoliticaDePrivacidadRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { startInstance } from './start.ts'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-    config: Awaited<ReturnType<typeof startInstance.getOptions>>
-  }
-}
