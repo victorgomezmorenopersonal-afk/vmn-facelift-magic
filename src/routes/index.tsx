@@ -59,7 +59,7 @@ const CONTACT = "https://www.vmntechnology.es/contacto";
 function Index() {
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <Nav />
+      <SiteHeader />
       <Hero />
       <Trust />
       <About />
