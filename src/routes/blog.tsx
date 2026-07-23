@@ -2,45 +2,10 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, CalendarDays, MessageCircle, User } from "lucide-react";
 import { SiteHeader } from "@/components/SiteHeader";
 import { PageHero, SiteFooter } from "@/components/SiteFooter";
-import blogIphone from "@/assets/blog-iphone-wholesale.jpg";
-import blogRefurbished from "@/assets/blog-refurbished.jpg";
-import blogProfitability from "@/assets/blog-profitability.jpg";
+import { posts } from "@/lib/blog-posts";
 
 const WHATSAPP = "https://wa.me/+34689592659";
 
-const posts = [
-  {
-    title:
-      "Comprar iPhone al por mayor en España: Guía completa para profesionales (2026)",
-    author: "VMN Technology",
-    date: "20 de julio de 2026",
-    excerpt:
-      "Comprar iPhone al por mayor: una oportunidad para hacer crecer tu negocio.",
-    href: "https://www.vmntechnology.es/comprar-iphone-al-por-mayor-en-espana-guia-completa-para-profesionales-2026",
-    tag: "iPhone",
-    image: blogIphone,
-  },
-  {
-    title:
-      "¿Por qué comprar un móvil reacondicionado es una de las mejores decisiones en 2026?",
-    author: "VMN Technology",
-    date: "14 de julio de 2026",
-    excerpt: "¿Qué es exactamente un móvil reacondicionado?",
-    href: "https://www.vmntechnology.es/por-que-comprar-un-movil-reacondicionado-es-una-de-las-mejores-decisiones-en-2026",
-    tag: "Reacondicionados",
-    image: blogRefurbished,
-  },
-  {
-    title: "Móvil Reacondicionado en 2026: Por qué es tu mejor opción",
-    author: "VMN Technology",
-    date: "14 de julio de 2026",
-    excerpt:
-      "Descubre por qué comprar un móvil reacondicionado es la decisión más inteligente en 2026. Ahorro, sostenibilidad y calidad garantizada para tu negocio.",
-    href: "https://www.vmntechnology.es/por-que-comprar-movil-reacondicionado-2026-rentabilidad",
-    tag: "Rentabilidad",
-    image: blogProfitability,
-  },
-];
 
 
 export const Route = createFileRoute("/blog")({
