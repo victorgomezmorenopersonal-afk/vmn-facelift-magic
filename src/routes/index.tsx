@@ -14,8 +14,6 @@ import {
   Zap,
 } from "lucide-react";
 import heroDevices from "@/assets/hero-devices.jpg";
-import newPhones from "@/assets/new-phones.jpg";
-import refurbishedPhones from "@/assets/refurbished-phones.jpg";
 import quality from "@/assets/quality.jpg";
 import vmnLogo from "@/assets/vmn-logo.jpeg.asset.json";
 import { SiteHeader } from "@/components/SiteHeader";
@@ -64,7 +62,6 @@ function Index() {
       <Trust />
       <About />
       <WhatsappCTA />
-      <Products />
       <Quality />
       <FinalCTA />
       <Footer />
@@ -296,95 +293,6 @@ function WhatsappCTA() {
   );
 }
 
-function Products() {
-  const products = [
-    {
-      img: newPhones,
-      tag: "Nuevos",
-      title: "Smartphones nuevos",
-      body:
-        "Descubre nuestra selección de móviles nuevos de las principales marcas del mercado, ideales para ofrecer a tus clientes productos actuales con garantía oficial y máxima fiabilidad. Disponemos de modelos actualizados con stock constante y precios competitivos para profesionales.",
-      cta: "Accede ahora a nuestra sección de móviles nuevos y encuentra los dispositivos que mejor encajan con tu negocio.",
-      slug: "smartphones-nuevos-madrid",
-    },
-    {
-      img: refurbishedPhones,
-      tag: "Reacondicionados",
-      title: "Smartphones reacondicionados",
-      body:
-        "Si buscas una opción más económica sin renunciar a la calidad, nuestros smartphones reacondicionados grado A y A+ son la solución perfecta. Equipos revisados, testados y listos para su uso, ideales para ampliar tu catálogo con productos de alta rotación y excelente margen.",
-      cta: "Explora nuestra sección de móviles reacondicionados y aprovecha las mejores oportunidades del mercado.",
-      slug: "smartphones-reacondicionados-alta-gama-madrid",
-    },
-  ];
-
-  return (
-    <section id="productos" className="bg-surface py-24">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="max-w-3xl">
-          <span className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">
-            Nuestros equipos
-          </span>
-          <h2 className="mt-3 font-display text-3xl font-bold tracking-tight sm:text-4xl">
-            Accede directamente a nuestros equipos nuevos y reacondicionados
-          </h2>
-          <p className="mt-4 text-muted-foreground">
-            En VMN Technology te facilitamos el acceso directo a nuestras
-            principales líneas de producto para que encuentres rápidamente lo
-            que necesitas según tu modelo de negocio.
-          </p>
-        </div>
-
-        <div className="mt-12 grid gap-8 md:grid-cols-2">
-          {products.map((p) => (
-            <article
-              key={p.title}
-              className="group relative flex flex-col overflow-hidden rounded-3xl border border-border/60 bg-card shadow-card transition-all hover:-translate-y-1 hover:shadow-elegant"
-            >
-              <div className="relative aspect-[16/10] overflow-hidden">
-                <img
-                  src={p.img}
-                  alt={p.title}
-                  loading="lazy"
-                  width={1024}
-                  height={640}
-                  className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
-                />
-                <span className="absolute left-4 top-4 rounded-full bg-background/90 px-3 py-1 text-xs font-semibold text-primary backdrop-blur">
-                  {p.tag}
-                </span>
-              </div>
-              <div className="flex flex-1 flex-col gap-4 p-8">
-                <h3 className="font-display text-2xl font-bold tracking-tight">
-                  {p.title}
-                </h3>
-                <p className="text-muted-foreground">{p.body}</p>
-                <p className="text-sm font-medium text-foreground">{p.cta}</p>
-                <Link
-                  to="/blog/$slug"
-                  params={{ slug: p.slug }}
-                  className="mt-auto inline-flex w-fit items-center gap-2 rounded-full bg-foreground px-5 py-2.5 text-sm font-semibold text-background transition-transform hover:-translate-y-0.5"
-                >
-                  Leer artículo <ArrowRight className="h-4 w-4" />
-                </Link>
-              </div>
-            </article>
-          ))}
-        </div>
-
-        <div className="mt-10 flex justify-center">
-          <Link
-            to="/smartphones"
-            className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-6 py-3 text-sm font-semibold text-foreground shadow-card transition-transform hover:-translate-y-0.5"
-          >
-            Ver sección Smartphones nuevos y reacondicionados{" "}
-            <ArrowRight className="h-4 w-4 text-primary" />
-          </Link>
-        </div>
-      </div>
-    </section>
-  );
-}
 
 function Quality() {
   const features = [
