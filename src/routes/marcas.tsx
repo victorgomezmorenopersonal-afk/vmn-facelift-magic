@@ -129,12 +129,13 @@ function MarcasPage() {
                     {b.name}
                   </h3>
                   <p className="mt-3 text-muted-foreground">{b.body}</p>
-                  <a
-                    href={WHATSAPP}
+                  <Link
+                    to="/blog/$slug"
+                    params={{ slug: b.slug }}
                     className="mt-6 inline-flex w-fit items-center gap-2 rounded-full bg-foreground px-5 py-2.5 text-sm font-semibold text-background transition-transform hover:-translate-y-0.5"
                   >
-                    Consultar stock <ArrowRight className="h-4 w-4" />
-                  </a>
+                    Leer artículo <ArrowRight className="h-4 w-4" />
+                  </Link>
                 </div>
               </article>
             ))}
