@@ -9,6 +9,7 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as SmartphonesRouteImport } from './routes/smartphones'
 import { Route as PoliticaDePrivacidadRouteImport } from './routes/politica-de-privacidad'
 import { Route as PoliticaDeCookiesRouteImport } from './routes/politica-de-cookies'
 import { Route as NosotrosRouteImport } from './routes/nosotros'
@@ -20,6 +21,11 @@ import { Route as IndexRouteImport } from './routes/index'
 import { Route as BlogIndexRouteImport } from './routes/blog.index'
 import { Route as BlogSlugRouteImport } from './routes/blog.$slug'
 
+const SmartphonesRoute = SmartphonesRouteImport.update({
+  id: '/smartphones',
+  path: '/smartphones',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const PoliticaDePrivacidadRoute = PoliticaDePrivacidadRouteImport.update({
   id: '/politica-de-privacidad',
   path: '/politica-de-privacidad',
@@ -81,6 +87,7 @@ export interface FileRoutesByFullPath {
   '/nosotros': typeof NosotrosRoute
   '/politica-de-cookies': typeof PoliticaDeCookiesRoute
   '/politica-de-privacidad': typeof PoliticaDePrivacidadRoute
+  '/smartphones': typeof SmartphonesRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/blog/': typeof BlogIndexRoute
 }
@@ -93,6 +100,7 @@ export interface FileRoutesByTo {
   '/nosotros': typeof NosotrosRoute
   '/politica-de-cookies': typeof PoliticaDeCookiesRoute
   '/politica-de-privacidad': typeof PoliticaDePrivacidadRoute
+  '/smartphones': typeof SmartphonesRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/blog': typeof BlogIndexRoute
 }
@@ -106,6 +114,7 @@ export interface FileRoutesById {
   '/nosotros': typeof NosotrosRoute
   '/politica-de-cookies': typeof PoliticaDeCookiesRoute
   '/politica-de-privacidad': typeof PoliticaDePrivacidadRoute
+  '/smartphones': typeof SmartphonesRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/blog/': typeof BlogIndexRoute
 }
@@ -120,6 +129,7 @@ export interface FileRouteTypes {
     | '/nosotros'
     | '/politica-de-cookies'
     | '/politica-de-privacidad'
+    | '/smartphones'
     | '/blog/$slug'
     | '/blog/'
   fileRoutesByTo: FileRoutesByTo
@@ -132,6 +142,7 @@ export interface FileRouteTypes {
     | '/nosotros'
     | '/politica-de-cookies'
     | '/politica-de-privacidad'
+    | '/smartphones'
     | '/blog/$slug'
     | '/blog'
   id:
@@ -144,6 +155,7 @@ export interface FileRouteTypes {
     | '/nosotros'
     | '/politica-de-cookies'
     | '/politica-de-privacidad'
+    | '/smartphones'
     | '/blog/$slug'
     | '/blog/'
   fileRoutesById: FileRoutesById
@@ -157,12 +169,20 @@ export interface RootRouteChildren {
   NosotrosRoute: typeof NosotrosRoute
   PoliticaDeCookiesRoute: typeof PoliticaDeCookiesRoute
   PoliticaDePrivacidadRoute: typeof PoliticaDePrivacidadRoute
+  SmartphonesRoute: typeof SmartphonesRoute
   BlogSlugRoute: typeof BlogSlugRoute
   BlogIndexRoute: typeof BlogIndexRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/smartphones': {
+      id: '/smartphones'
+      path: '/smartphones'
+      fullPath: '/smartphones'
+      preLoaderRoute: typeof SmartphonesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/politica-de-privacidad': {
       id: '/politica-de-privacidad'
       path: '/politica-de-privacidad'
@@ -245,6 +265,7 @@ const rootRouteChildren: RootRouteChildren = {
   NosotrosRoute: NosotrosRoute,
   PoliticaDeCookiesRoute: PoliticaDeCookiesRoute,
   PoliticaDePrivacidadRoute: PoliticaDePrivacidadRoute,
+  SmartphonesRoute: SmartphonesRoute,
   BlogSlugRoute: BlogSlugRoute,
   BlogIndexRoute: BlogIndexRoute,
 }
