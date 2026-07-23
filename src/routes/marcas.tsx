@@ -2,10 +2,11 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, MessageCircle } from "lucide-react";
 import { SiteHeader } from "@/components/SiteHeader";
 import { PageHero, SiteFooter } from "@/components/SiteFooter";
-import brandApple from "@/assets/brand-funker.jpg";
+import brandApple from "@/assets/brand-apple.jpg";
 import brandSamsung from "@/assets/brand-samsung.jpg";
 import brandXiaomi from "@/assets/brand-xiaomi.jpg";
-import brandFunker from "@/assets/brand-apple.jpg";
+import brandFunker from "@/assets/brand-funker.jpg";
+
 
 
 const WHATSAPP = "https://wa.me/+34689592659";
