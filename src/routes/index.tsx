@@ -62,7 +62,6 @@ function Index() {
       <Trust />
       <About />
       <WhatsappCTA />
-      <Products />
       <Quality />
       <FinalCTA />
       <Footer />
