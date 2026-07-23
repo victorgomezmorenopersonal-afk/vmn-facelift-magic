@@ -2,45 +2,10 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, CalendarDays, MessageCircle, User } from "lucide-react";
 import { SiteHeader } from "@/components/SiteHeader";
 import { PageHero, SiteFooter } from "@/components/SiteFooter";
-import blogIphone from "@/assets/blog-iphone-wholesale.jpg";
-import blogRefurbished from "@/assets/blog-refurbished.jpg";
-import blogProfitability from "@/assets/blog-profitability.jpg";
+import { posts } from "@/lib/blog-posts";
 
 const WHATSAPP = "https://wa.me/+34689592659";
 
-const posts = [
-  {
-    title:
-      "Comprar iPhone al por mayor en España: Guía completa para profesionales (2026)",
-    author: "VMN Technology",
-    date: "20 de julio de 2026",
-    excerpt:
-      "Comprar iPhone al por mayor: una oportunidad para hacer crecer tu negocio.",
-    href: "https://www.vmntechnology.es/comprar-iphone-al-por-mayor-en-espana-guia-completa-para-profesionales-2026",
-    tag: "iPhone",
-    image: blogIphone,
-  },
-  {
-    title:
-      "¿Por qué comprar un móvil reacondicionado es una de las mejores decisiones en 2026?",
-    author: "VMN Technology",
-    date: "14 de julio de 2026",
-    excerpt: "¿Qué es exactamente un móvil reacondicionado?",
-    href: "https://www.vmntechnology.es/por-que-comprar-un-movil-reacondicionado-es-una-de-las-mejores-decisiones-en-2026",
-    tag: "Reacondicionados",
-    image: blogRefurbished,
-  },
-  {
-    title: "Móvil Reacondicionado en 2026: Por qué es tu mejor opción",
-    author: "VMN Technology",
-    date: "14 de julio de 2026",
-    excerpt:
-      "Descubre por qué comprar un móvil reacondicionado es la decisión más inteligente en 2026. Ahorro, sostenibilidad y calidad garantizada para tu negocio.",
-    href: "https://www.vmntechnology.es/por-que-comprar-movil-reacondicionado-2026-rentabilidad",
-    tag: "Rentabilidad",
-    image: blogProfitability,
-  },
-];
 
 
 export const Route = createFileRoute("/blog")({
@@ -142,10 +107,14 @@ function BlogPage() {
           <div className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {posts.map((p) => (
               <article
-                key={p.href}
+                key={p.slug}
                 className="group relative flex flex-col overflow-hidden rounded-3xl border border-border/60 bg-card shadow-card transition-all hover:-translate-y-1 hover:shadow-elegant"
               >
-                <div className="relative aspect-[16/10] overflow-hidden bg-gradient-soft">
+                <Link
+                  to="/blog/$slug"
+                  params={{ slug: p.slug }}
+                  className="relative aspect-[16/10] overflow-hidden bg-gradient-soft"
+                >
                   <img
                     src={p.image}
                     alt={p.title}
@@ -157,7 +126,7 @@ function BlogPage() {
                   <span className="absolute left-4 top-4 rounded-full bg-background/90 px-3 py-1 text-xs font-semibold text-primary backdrop-blur">
                     {p.tag}
                   </span>
-                </div>
+                </Link>
 
                 <div className="flex flex-1 flex-col gap-4 p-7">
                   <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-muted-foreground">
@@ -169,18 +138,26 @@ function BlogPage() {
                     </span>
                   </div>
                   <h3 className="font-display text-lg font-bold leading-snug tracking-tight">
-                    {p.title}
+                    <Link
+                      to="/blog/$slug"
+                      params={{ slug: p.slug }}
+                      className="transition-colors hover:text-primary"
+                    >
+                      {p.title}
+                    </Link>
                   </h3>
                   <p className="text-sm text-muted-foreground">{p.excerpt}</p>
-                  <a
-                    href={p.href}
+                  <Link
+                    to="/blog/$slug"
+                    params={{ slug: p.slug }}
                     className="mt-auto inline-flex w-fit items-center gap-2 text-sm font-semibold text-primary hover:gap-3 transition-all"
                   >
                     Leer artículo <ArrowRight className="h-4 w-4" />
-                  </a>
+                  </Link>
                 </div>
               </article>
             ))}
+
           </div>
         </div>
       </section>
