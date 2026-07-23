@@ -18,6 +18,8 @@ import newPhones from "@/assets/new-phones.jpg";
 import refurbishedPhones from "@/assets/refurbished-phones.jpg";
 import quality from "@/assets/quality.jpg";
 import vmnLogo from "@/assets/vmn-logo.jpeg.asset.json";
+import { SiteHeader } from "@/components/SiteHeader";
+
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -57,7 +59,7 @@ const CONTACT = "https://www.vmntechnology.es/contacto";
 function Index() {
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <Nav />
+      <SiteHeader />
       <Hero />
       <Trust />
       <About />
@@ -70,61 +72,8 @@ function Index() {
   );
 }
 
-function Nav() {
-  const links = [
-    { label: "Inicio", to: "/" as const },
-    { label: "Nosotros", to: "/nosotros" as const },
-    { label: "Marcas", to: "/marcas" as const },
-    { label: "Blog", to: "/blog" as const },
-    { label: "Contacto", to: "/contacto" as const },
-  ];
-  return (
-    <header className="sticky top-0 z-40 border-b border-border/60 bg-background/80 backdrop-blur-xl">
-      <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
-        <Link to="/" className="flex items-center gap-3">
-          <img
-            src={vmnLogo.url}
-            alt="VMN Technology"
-            className="h-11 w-11 rounded-xl object-contain shadow-soft"
-          />
-          <div className="leading-tight">
-            <div className="font-display text-lg font-bold tracking-tight text-primary">
-              VMN
-            </div>
-            <div className="-mt-1 text-[10px] font-semibold uppercase tracking-[0.2em] text-muted-foreground">
-              Technology
-            </div>
-          </div>
-        </Link>
-        <nav className="hidden items-center gap-1 md:flex">
-          {links.map((l) => (
-            <Link
-              key={l.to}
-              to={l.to}
-              activeOptions={{ exact: true }}
-              activeProps={{ className: "bg-secondary text-foreground" }}
-              className="rounded-full px-4 py-2 text-sm font-medium text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground"
-            >
-              {l.label}
-            </Link>
-          ))}
-        </nav>
-        <Link
-          to="/contacto"
-          className="hidden items-center gap-2 rounded-full bg-gradient-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground shadow-soft transition-transform hover:-translate-y-0.5 md:inline-flex"
-        >
-          Contactar <ArrowRight className="h-4 w-4" />
-        </Link>
-        <Link
-          to="/contacto"
-          className="rounded-full bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground md:hidden"
-        >
-          Contactar
-        </Link>
-      </div>
-    </header>
-  );
-}
+
+
 
 
 function Hero() {
