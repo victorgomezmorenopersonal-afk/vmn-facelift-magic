@@ -1,6 +1,8 @@
 import blogIphone from "@/assets/blog-iphone-wholesale.jpg";
 import blogRefurbished from "@/assets/blog-refurbished.jpg";
 import blogProfitability from "@/assets/blog-profitability.jpg";
+import newPhones from "@/assets/new-phones.jpg";
+import refurbishedPhones from "@/assets/refurbished-phones.jpg";
 
 export type BlogSection =
   | { type: "p"; html: string }
@@ -440,6 +442,120 @@ export const posts: BlogPost[] = [
       {
         type: "p",
         html: "Si estás listo para dar el salto y transformar tu catálogo con los mejores smartphones del mercado, no dudes en ponerte en contacto con nuestro equipo de expertos. En el blog de VMN Technology seguiremos informándote sobre las últimas tendencias y consejos para que tu negocio tecnológico nunca deje de crecer.",
+      },
+    ],
+  },
+  {
+    slug: "smartphones-nuevos-madrid",
+    title: "Venta de equipos nuevos en Madrid",
+    excerpt:
+      "Móviles, tablets y dispositivos nuevos de las principales marcas, con stock inmediato y garantía.",
+    author: "VMN Technology",
+    date: "10 de julio de 2026",
+    tag: "Smartphones nuevos",
+    image: newPhones,
+    lead: "Amplia selección de smartphones nuevos y dispositivos tecnológicos originales, con procedencia garantizada y precios competitivos para profesionales y particulares.",
+    sections: [
+      {
+        type: "p",
+        html: "En <strong>VMN Technology</strong> encontrarás una amplia selección de <strong>móviles nuevos</strong>, tablets y dispositivos tecnológicos de las principales marcas del mercado. Nos especializamos en ofrecer soluciones tanto para profesionales como para particulares que buscan equipos fiables, actuales y con garantía. Como proveedor en Madrid, trabajamos con un catálogo actualizado que incluye modelos de última generación, adaptados a diferentes necesidades y presupuestos.",
+      },
+      {
+        type: "p",
+        html: "Nuestro compromiso es ofrecer productos originales, con procedencia garantizada y a precios competitivos. Gracias a nuestra experiencia en el sector, podemos asesorarte para que encuentres el dispositivo que mejor se adapte a tu uso, ya sea para uso personal, empresarial o para la reventa en tu negocio.",
+      },
+      { type: "h2", text: "Equipos nuevos con disponibilidad inmediata" },
+      {
+        type: "p",
+        html: "En <strong>VMN Technology</strong> contamos con un sistema de stock dinámico que nos permite ofrecer <strong>disponibilidad inmediata</strong> en una amplia variedad de dispositivos. Esto es especialmente importante para tiendas de telefonía, distribuidores y empresas que necesitan reposición rápida sin interrupciones en su actividad.",
+      },
+      {
+        type: "p",
+        html: "Trabajamos para garantizar entregas ágiles y eficientes, evitando tiempos de espera innecesarios. Nuestro objetivo es que puedas acceder a los equipos que necesitas en el momento adecuado, con total confianza y seguridad.",
+      },
+      { type: "h3", text: "Consulta nuestro catálogo" },
+      {
+        type: "p",
+        html: "Si deseas conocer los modelos disponibles en tiempo real, te invitamos a contactar por WhatsApp. Nuestro equipo te proporcionará información actualizada sobre stock, precios y características de cada dispositivo, ayudándote a tomar la mejor decisión.",
+      },
+      { type: "h2", text: "Calidad garantizada" },
+      {
+        type: "p",
+        html: "Todos nuestros equipos nuevos pasan por controles de calidad para asegurar su correcto funcionamiento. Trabajamos únicamente con dispositivos originales, preparados para ofrecer el máximo rendimiento desde el primer uso.",
+      },
+      {
+        type: "p",
+        html: "Además, ofrecemos garantía en todos nuestros productos, lo que aporta tranquilidad y respaldo tanto a particulares como a profesionales que confían en nosotros como proveedor tecnológico.",
+      },
+      {
+        type: "p",
+        html: "En <strong>VMN Technology</strong> entendemos que cada cliente tiene necesidades específicas. Por eso, ofrecemos presupuestos personalizados adaptados a cada caso, ya sea para compras individuales o pedidos al por mayor.",
+      },
+      { type: "h3", text: "Solicita tu presupuesto" },
+      {
+        type: "p",
+        html: "Confía en nosotros como tu proveedor de equipos nuevos en Madrid. <strong>Ponte en contacto con nuestro equipo</strong> y descubre nuestras condiciones, promociones y ventajas exclusivas. Estamos aquí para ayudarte a encontrar la mejor solución tecnológica con rapidez, confianza y profesionalidad.",
+      },
+    ],
+  },
+  {
+    slug: "smartphones-reacondicionados-alta-gama-madrid",
+    title: "Venta de móviles reacondicionados de alta gama en Madrid",
+    excerpt:
+      "Smartphones reacondicionados grado A y A+, revisados y garantizados. Calidad y ahorro para tu negocio.",
+    author: "VMN Technology",
+    date: "5 de julio de 2026",
+    tag: "Reacondicionados",
+    image: refurbishedPhones,
+    lead: "Especialistas en smartphones reacondicionados de alta gama en grado A y A+, con revisión técnica exhaustiva y garantía en todos los dispositivos.",
+    sections: [
+      {
+        type: "p",
+        html: "En <strong>VMN Technology</strong> somos especialistas en la venta de <strong>smartphones reacondicionados de alta gama</strong>, ofreciendo soluciones fiables tanto para profesionales como para particulares que buscan calidad a un precio competitivo. Nuestro catálogo incluye dispositivos de las marcas más reconocidas del mercado, cuidadosamente seleccionados y preparados para garantizar el mejor rendimiento.",
+      },
+      {
+        type: "p",
+        html: "Disponemos de equipos en <strong>grado A y A+</strong>, lo que significa que presentan un excelente estado estético y funcional. Cada dispositivo ha sido revisado por técnicos especializados para asegurar que cumple con los estándares más exigentes antes de ser puesto a la venta. Esto nos permite ofrecer productos que combinan ahorro y confianza en cada compra.",
+      },
+      { type: "h2", text: "Ahorro sin renunciar a la calidad" },
+      {
+        type: "p",
+        html: "Los móviles reacondicionados representan una alternativa inteligente frente a los dispositivos nuevos.",
+      },
+      {
+        type: "p",
+        html: "En VMN Technology, nuestros clientes pueden acceder a terminales de alta gama con un precio significativamente inferior, sin sacrificar prestaciones ni durabilidad. Esto resulta especialmente atractivo para negocios que necesitan renovar su stock o ampliar su catálogo sin realizar grandes inversiones.",
+      },
+      {
+        type: "p",
+        html: "Además, trabajar con dispositivos reacondicionados contribuye a un consumo más sostenible, reduciendo el impacto ambiental y fomentando la reutilización de tecnología en perfecto estado.",
+      },
+      { type: "h3", text: "Consulta nuestro stock disponible" },
+      {
+        type: "p",
+        html: "Habla con nosotros por WhatsApp y descubre las mejores oportunidades en móviles reacondicionados de alta gama. Nuestro equipo te asesorará en tiempo real para ayudarte a encontrar los modelos que mejor se adapten a tus necesidades.",
+      },
+      { type: "h2", text: "Equipos revisados y garantizados" },
+      {
+        type: "p",
+        html: "Todos nuestros dispositivos pasan por un proceso exhaustivo de revisión técnica que incluye comprobaciones de hardware, batería, pantalla y funcionamiento general.",
+      },
+      {
+        type: "p",
+        html: "Solo aquellos equipos que superan estos controles son puestos a la venta, garantizando así una experiencia de uso óptima.",
+      },
+      {
+        type: "p",
+        html: "Además, ofrecemos garantía en todos nuestros productos, proporcionando tranquilidad y seguridad a nuestros clientes en cada compra.",
+      },
+      {
+        type: "p",
+        html: "En <strong>VMN Technology</strong> nos comprometemos a ofrecer un servicio profesional basado en la transparencia, la calidad y la atención personalizada. Contamos con <strong>stock constante</strong>, envíos rápidos a toda España y un equipo dispuesto a ayudarte en todo momento.",
+      },
+      { type: "h3", text: "Trabaja con un proveedor de confianza" },
+      {
+        type: "p",
+        html: "Si buscas un proveedor fiable de móviles reacondicionados de alta gama, estás en el lugar adecuado. <strong>Contacta con nosotros</strong> y solicita información sin compromiso para empezar a trabajar con nosotros.",
       },
     ],
   },
