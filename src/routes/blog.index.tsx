@@ -8,7 +8,7 @@ const WHATSAPP = "https://wa.me/+34689592659";
 
 
 
-export const Route = createFileRoute("/blog")({
+export const Route = createFileRoute("/blog/")({
   head: () => ({
     meta: [
       { title: "Blog · VMN Technology — Novedades y consejos de telefonía móvil" },
