@@ -2,7 +2,7 @@ import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { ArrowLeft, ArrowRight, CalendarDays, MessageCircle, User } from "lucide-react";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
-import { getPostBySlug, posts, type BlogSection } from "@/lib/blog-posts";
+import { getPostBySlug, posts, type BlogPost, type BlogSection } from "@/lib/blog-posts";
 
 const WHATSAPP = "https://wa.me/+34689592659";
 
@@ -120,7 +120,7 @@ function renderSection(section: BlogSection, index: number) {
 }
 
 function BlogPostPage() {
-  const { post } = Route.useLoaderData();
+  const { post } = Route.useLoaderData() as { post: BlogPost };
   const related = posts.filter((p) => p.slug !== post.slug).slice(0, 2);
 
   return (
