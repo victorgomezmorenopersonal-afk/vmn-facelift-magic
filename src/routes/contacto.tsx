@@ -65,8 +65,8 @@ function ContactoPage() {
           <InfoCard
             icon={Mail}
             title="Email"
-            lines={["clientes@vmntechnology.es"]}
-            href="mailto:clientes@vmntechnology.es"
+            lines={["clientes@vmntechnology.com"]}
+            href="mailto:clientes@vmntechnology.com"
           />
           <InfoCard
             icon={MapPin}
@@ -228,7 +228,7 @@ function ContactForm() {
     const body = encodeURIComponent(
       `Nombre: ${nombre}\nEmail: ${email}\n\n${mensaje}`,
     );
-    window.location.href = `mailto:clientes@vmntechnology.es?subject=${encodeURIComponent(
+    window.location.href = `mailto:clientes@vmntechnology.com?subject=${encodeURIComponent(
       "Consulta desde vmntechnology.es",
     )}&body=${body}`;
     setStatus("sent");
