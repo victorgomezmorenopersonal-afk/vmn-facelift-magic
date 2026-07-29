@@ -44,10 +44,10 @@ function Privacidad() {
         <li>
           Correo electrónico:{" "}
           <a
-            href="mailto:clientes@vmntechnology.com"
+            href="mailto:clientes@vmn-tecnology.com"
             className="text-primary hover:underline"
           >
-            clientes@vmntechnology.com
+            clientes@vmn-tecnology.com
           </a>
         </li>
         <li>
