@@ -2,7 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, CalendarDays, MessageCircle, User } from "lucide-react";
 import { SiteHeader } from "@/components/SiteHeader";
 import { PageHero, SiteFooter } from "@/components/SiteFooter";
-import { posts } from "@/lib/blog-posts";
+import { blogListPosts as posts } from "@/lib/blog-posts";
 
 const WHATSAPP = "https://wa.me/+34689592659";
 
