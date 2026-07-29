@@ -756,6 +756,19 @@ export const posts: BlogPost[] = [
   },
 ];
 
+export const brandSlugs = [
+  "por-que-comprar-apple-iphone-distribuidor",
+  "por-que-comprar-samsung-galaxy-distribuidor",
+  "por-que-comprar-xiaomi-distribuidor",
+  "por-que-comprar-funker-distribuidor",
+];
+
+/** Artículos listados en /blog (excluye los artículos de marca, que viven en /marcas). */
+export const blogListPosts: BlogPost[] = posts.filter(
+  (p) => !brandSlugs.includes(p.slug),
+);
+
 export function getPostBySlug(slug: string): BlogPost | undefined {
   return posts.find((p) => p.slug === slug);
 }
+
