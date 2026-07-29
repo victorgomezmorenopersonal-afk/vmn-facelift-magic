@@ -61,11 +61,11 @@ export function SiteFooter() {
             </li>
             <li>
               <a
-                href="mailto:clientes@vmntechnology.com"
+                href="mailto:clientes@vmn-tecnology.com"
                 className="inline-flex items-center gap-2 hover:text-foreground"
               >
                 <Mail className="h-4 w-4 text-primary" />
-                clientes@vmntechnology.com
+                clientes@vmn-tecnology.com
               </a>
             </li>
             <li>
@@ -93,7 +93,7 @@ export function SiteFooter() {
               <Instagram className="h-4 w-4" />
             </a>
             <a
-              href="mailto:clientes@vmntechnology.com"
+              href="mailto:clientes@vmn-tecnology.com"
               aria-label="Email"
               className="grid h-9 w-9 place-items-center rounded-full border border-border bg-card text-foreground transition-colors hover:bg-primary hover:text-primary-foreground"
             >
